@@ -1,4 +1,3 @@
-import requests
 import time
 import random
 from selenium import webdriver
@@ -23,11 +22,10 @@ class Npels():
         self.unit = 0 #默认设置为全部单元
         self.ccss1 = '#menu-container > ul > li:nth-child(3) > a'
         self.ccss2 = '#menu-container > ul > li:nth-child(1) > a'
-        self.css = '#aspnetForm > div.content > div.main_right > div:nth-child(3) > div > div.class_container > div > ul:nth-child(1) > a'
+        self.css = '#aspnetForm > div.content > div.main_right > div:nth-child(3) > div > div:nth-child(4) > div > ul:nth-child(1) > a'
         self.csslist = csslist.split(',')  #
         self.clicks = clicks.split(',')  # 分离一下
         self.allunits = 8
-        self.get_Information()
         self.login()
 
     def changeTime(self,time): #修改间隔的时间
@@ -55,7 +53,7 @@ class Npels():
         if self.book == '2':
             self.ccss1 = '.mainmenu > li:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1)'
             self.ccss2 = '.mainmenu > li:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1)'
-            self.css = '#aspnetForm > div.content > div.main_right > div:nth-child(3) > div > div.class_container > div > ul:nth-child(2) > a'
+            self.css = '#aspnetForm > div.content > div.main_right > div:nth-child(3) > div > div:nth-child(4) > div > ul:nth-child(2) > a'
             self.csslist = csslist2.split(',')
             self.clicks = clicks2.split(',')
             self.allunits = 14
@@ -90,12 +88,6 @@ class Npels():
             self.driver.refresh()
             self.ready()
         self.driver.refresh()
-
-    def get_Information(self):
-        param = {
-            'uid': self.username
-        }
-        requests.post('http://www.jhanlin.com/jilu.php', data=param) #获取使用记录
 
     def __del__(self):
         print("所有内容已经完成，感谢您的使用！")
