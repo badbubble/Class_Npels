@@ -14,7 +14,8 @@
  * 3.下载浏览器驱动并放在python目录下　[下载地址](https://pan.baidu.com/s/1o7Gusf4) 密码:724m
 
 # 使用教程
-* 1.打开在程序文件夹目录打开cmd界面　输入命令 `pip install -r requirements.txt` 等待安装完成
-* 2.打开在程序文件夹目录打开cmd界面 输入命令 `python3 run.py` 按提示输入你的账号密码
+* 1.将这个脚本下载下来！
+* 2.打开在程序文件夹目录打开cmd界面　输入命令 `pip install -r requirements.txt` 等待安装完成
+* 3.打开在程序文件夹目录打开cmd界面 输入命令 `python run.py` 按提示输入你的账号密码
 
 # 如果你喜欢这个脚本的话那就点个赞呗
