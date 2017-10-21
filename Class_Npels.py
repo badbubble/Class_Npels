@@ -7,7 +7,6 @@ from clickList import csslist,clicks,csslist2,clicks2
 
 #建立类
 class Npels():
-
     def __init__(self,username,pwd,timecut = 60,TIME = 10):
         npelsurl = 'http://192.168.100.117/NPELS'  # URL
         self.driver = webdriver.Chrome()  # 使用Chrome浏览器
@@ -59,7 +58,7 @@ class Npels():
             self.allunits = 14
             #print(type(self.unit))
         for i in range( (int(self.unit) - 1),int(self.allunits)):
-                self.TIME = 45
+                self.TIME = 0
                 print('此单元将进行%s分钟' % self.TIME)
                 self.start(i)
 
@@ -82,7 +81,7 @@ class Npels():
             print('已进行 %s 分钟' % ((time.time() - timebefore) / 60))
             if int(self.TIME) < int((time.time() - timebefore) / 60):
                 break
-        if self.book == '1':
+        if self.book == '1' and self.unit == 8:
             self.book = '2'
             self.unit = 1
             self.driver.refresh()
