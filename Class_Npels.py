@@ -58,7 +58,7 @@ class Npels():
             self.allunits = 14
             #print(type(self.unit))
         for i in range( (int(self.unit) - 1),int(self.allunits)):
-                self.TIME = 0
+                self.TIME = 45
                 print('此单元将进行%s分钟' % self.TIME)
                 self.start(i)
 
