@@ -1,10 +1,10 @@
 from Class_Npels import Npels
-from show_myweb import Show
+#from show_myweb import Show
 if __name__ == '__main__':
     username = input('请输入账号(回车后继续):')
     pwd = input('请输入密码(回车后继续):')
     a = Npels(username, pwd)
-    s = Show()
+    #s = Show()
     print("#############请选择#################")
     print('1.综合')
     print('2.听说')
